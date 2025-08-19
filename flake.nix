@@ -26,8 +26,8 @@
       installPhase = ''
         mkdir -p $out/share/plymouth/themes/plymouththeme-cat
         cp -rT $src $out/share/plymouth/themes/plymouththeme-cat
-        find $out/share/plymouth/themes/ -name '*.plymouth' \
-            -exec sed -i "s@/usr/@$out/@" {} \;
+        sed -i "s@/usr/@$out/@" \
+          $out/share/plymouth/themes/plymouththeme-cat/PlymouthTheme-Cat.plymouth
       '';
 
     };
