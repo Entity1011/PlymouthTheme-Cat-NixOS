@@ -20,7 +20,12 @@
     stdenv.mkDerivation {
       pname = "plymouththeme-cat";
       version = "0.0.0";
-      src = inputs.plymouththeme-cat;
+      src = pkgs.fetchgit {
+        url = "https://github.com/krishnan793/PlymouthTheme-Cat";
+        rev = "9f9bbc0e6cb8677684d198eb1139d90aceff82e0";
+        sha256 = "0";
+        fetchSubmodules = true;
+      };
       dontBuild = true;
       installPhase = ''
         mkdir -p $out/share/plymouth/themes/plymouththeme-cat
