@@ -18,12 +18,13 @@
       version = "0.0.0";
       src = ./PlymouthTheme-Cat;
       dontBuild = true;
-      installPhase =
-      ''
+      installPhase = ''
         mkdir -p $out/share/plymouth/themes/plymouththeme-cat
-        cp -r $src/* $out/share/plymouth/themes/plymouththeme-cat/
-        find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@\/usr\/@$out\/@" {} \;
+        cp -rT $src $out/share/plymouth/themes/plymouththeme-cat
+        find $out/share/plymouth/themes/ -name '*.plymouth' \
+            -exec sed -i "s@/usr/@$out/@" {} \;
       '';
+
     };
   };
 }
