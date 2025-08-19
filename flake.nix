@@ -1,7 +1,15 @@
 {
   description = "Cat Plymouth Theme";
 
-  outputs =
+  inputs =
+  {
+    nixpkgs =
+    {
+        url = "github:nixos/nixpkgs/nixos-25.05";
+    };
+  };
+
+  outputs = inputs:
   {
     packages.x86_64-linux.default = stdenv.mkDerivation
     {
@@ -21,6 +29,7 @@
         cp -rT $src $out/share/plymouth/themes/PlymouthTheme-Cat
         sed -i "s@/usr/@$out/@" $out/share/plymouth/themes/PlymouthTheme-Cat/plymouththeme-cat.plymouth
       '';
+
     };
   };
 }
