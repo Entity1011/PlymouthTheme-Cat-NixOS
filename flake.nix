@@ -10,7 +10,7 @@
     plymouththeme-cat =
     {
         url = "github:krishnan793/PlymouthTheme-Cat"
-    }
+    };
   };
 
   outputs = inputs:
