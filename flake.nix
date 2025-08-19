@@ -7,6 +7,10 @@
     {
         url = "github:nixos/nixpkgs/nixos-25.05";
     };
+    plymouththeme-cat =
+    {
+        url = "github:krishnan793/PlymouthTheme-Cat"
+    }
   };
 
   outputs = inputs:
@@ -16,7 +20,7 @@
     stdenv.mkDerivation {
       pname = "plymouththeme-cat";
       version = "0.0.0";
-      src = ./PlymouthTheme-Cat;
+      src = inputs.plymouththeme-cat;
       dontBuild = true;
       installPhase = ''
         mkdir -p $out/share/plymouth/themes/plymouththeme-cat
