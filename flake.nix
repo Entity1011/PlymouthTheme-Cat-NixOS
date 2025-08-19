@@ -24,10 +24,10 @@
       };
       dontBuild = true;
       installPhase = ''
-        mkdir -p $out/share/plymouth/themes/plymouththeme-cat
-        cp -rT $src $out/share/plymouth/themes/plymouththeme-cat
-        mv $out/share/plymouth/themes/plymouththeme-cat/PlymouthTheme-Cat.plymouth $out/share/plymouth/themes/plymouththeme-cat/plymouththeme-cat.plymouth
-        sed -i "s@/usr/@$out/@" $out/share/plymouth/themes/plymouththeme-cat/plymouththeme-cat.plymouth
+        mkdir -p $out/share/plymouth/themes/PlymouthTheme-Cat
+        cp -rT $src $out/share/plymouth/themes/PlymouthTheme-Cat
+        mv $out/share/plymouth/themes/PlymouthTheme-Cat/PlymouthTheme-Cat.plymouth $out/share/plymouth/themes/PlymouthTheme-Cat/plymouththeme-cat.plymouth
+        sed -i "s@/usr/@$out/@" $out/share/plymouth/themes/PlymouthTheme-Cat/plymouththeme-cat.plymouth
       '';
 
     };
