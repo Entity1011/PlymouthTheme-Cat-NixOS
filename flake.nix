@@ -27,7 +27,7 @@
       ''
         mkdir -p $out/share/plymouth/themes/PlymouthTheme-Cat
         cp -rT $src $out/share/plymouth/themes/PlymouthTheme-Cat
-        sed -i "s@/usr/@$out/@" $out/share/plymouth/themes/PlymouthTheme-Cat/plymouththeme-cat.plymouth
+        sed -i "s@/usr/@$out/@" $out/share/plymouth/themes/PlymouthTheme-Cat/PlymouthTheme-Cat.plymouth
       '';
 
     };
