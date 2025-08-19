@@ -11,7 +11,9 @@
 
   outputs = inputs:
   {
-    packages.x86_64-linux.default = stdenv.mkDerivation
+    packages.x86_64-linux.default =
+    with import inputs.nixpkgs { system = "x86_64-linux"; };
+    stdenv.mkDerivation
     {
       pname = "plymouththeme-cat";
       version = "0.0.0";
