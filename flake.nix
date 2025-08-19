@@ -7,10 +7,6 @@
     {
         url = "github:nixos/nixpkgs/nixos-25.05";
     };
-    plymouththeme-cat =
-    {
-        url = "github:krishnan793/PlymouthTheme-Cat";
-    };
   };
 
   outputs = inputs:
